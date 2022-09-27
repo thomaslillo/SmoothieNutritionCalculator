@@ -60,11 +60,11 @@ def App():
   # get the smoothie stats
   st.header("Your Smoothie's Stats")
   
-  total_cals = smoothie_nutri_total(all_fruits, 'Calories', fruit_counts)
-  total_carbs = smoothie_nutri_total(all_fruits, 'Carbohydrates', fruit_counts)
-  total_protine = smoothie_nutri_total(all_fruits, 'Protein', fruit_counts)
-  total_fat = smoothie_nutri_total(all_fruits, 'Fat', fruit_counts)
-  total_sugar = smoothie_nutri_total(all_fruits, 'Sugar', fruit_counts)      
+  # total_cals = smoothie_nutri_total(all_fruits, 'Calories', fruit_counts)
+  # total_carbs = smoothie_nutri_total(all_fruits, 'Carbohydrates', fruit_counts)
+  # total_protine = smoothie_nutri_total(all_fruits, 'Protein', fruit_counts)
+  # total_fat = smoothie_nutri_total(all_fruits, 'Fat', fruit_counts)
+  # total_sugar = smoothie_nutri_total(all_fruits, 'Sugar', fruit_counts)      
   
   # display the stats
   cals, carbs, protine, fat, sugar = st.columns(5)
