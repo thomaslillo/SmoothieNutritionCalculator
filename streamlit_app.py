@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas
+import requests
 
 st.header('Smoothie Nutrition')
 st.text('Figure out how healthy your smoothies are.')
@@ -31,3 +32,6 @@ col3.metric(label="Total Protine (G)", value="70 °F", delta="1.2 °F")
 st.header('All Fruits')
 
 st.dataframe(my_fruit_list)
+
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
+streamlit.text(fruityvice_response)
