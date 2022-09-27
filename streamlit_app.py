@@ -3,10 +3,19 @@ import pandas
 import requests
 # import snowflake.connector
 
+def get_all_fruit():    
+  fruityvice_response = requests.get("https://fruityvice.com/api/fruit/all")  
+  #st.text(fruityvice_response.json())  
+  st.text(fruityvice_response.json)  
+  fruityvice_normalized = pandas.json_normalize(fruityvice_response.json()) 
+  return fruityvice_normalized
+
 st.header('Build your own smoothie below!')
 st.text('Figure out how healthy your smoothies are.')
 
 st.button("Get Fruit List", key=None, help=None, on_click=None)
+
+returned = get_all_fruit()
 
 # bring in the data - alt source
 # my_fruit_list = pandas.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt")
@@ -31,11 +40,10 @@ col3.metric(label="Total Protine (G)", value="70 °F", delta="1.2 °F")
 # all fruits
 st.header('All Fruits')
 
-st.dataframe(my_fruit_list)
+# st.dataframe(my_fruit_list)
 
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/all")
 #t.text(fruityvice_response.json())
 
 fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
-# write your own comment - what does this do?
 st.dataframe(fruityvice_normalized)
