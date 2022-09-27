@@ -17,7 +17,7 @@ def get_all_fruit():
 def FruitSelector():
   fruits_df = get_all_fruit()  
   
-  # fruits.df
+  display_fruits = fruits_df.set_index('name')
   
   # list the fruits
   # fruits_selected = st.multiselect("Pick Fruits:", list(fruits_df.index))
@@ -28,7 +28,7 @@ def FruitSelector():
   # display_selected_fruits = my_fruit_list.loc[fruits_selected]
   
   st.header('All Fruits')
-  st.dataframe(fruits_df)
+  st.dataframe(display_fruits)
   
   col1, col2, col3 = st.columns(3)
 
