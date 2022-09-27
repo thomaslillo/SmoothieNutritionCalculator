@@ -1,13 +1,15 @@
 import streamlit
 import pandas
 
-streamlit.header('Breakfast Menu')
-streamlit.text('Omega 3 & Blueberry Oatmeal')
-streamlit.text('Kale, Spinach & Rocket Smoothie')
-streamlit.text('Hard-Boiled Free-Range Egg')
+streamlit.header('Smoothie Nutrition')
+streamlit.text('Figure out how healthy your smoothies are.')
 
-streamlit.header('Build your own smoothie!')
+streamlit.header('Build your own smoothie below!')
 
 my_fruit_list = pandas.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt")
+
+
+# list the fruits
+streamlit.multiselect("Pick Fruits:", list(my_fruit_list.index))
 
 streamlit.dataframe(my_fruit_list)
