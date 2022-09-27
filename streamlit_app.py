@@ -34,7 +34,7 @@ def App():
   fruits_df = fruits_df[~fruits_df['Calories'].isnull()]
   
   # clean the table
-  all_fruits = (fruits_df.set_index('Fruit')).drop(['Weight','Metric'], axis=1)
+  all_fruits = fruits_df.set_index('Fruit'))
       
   # list the selected fruits
   fruits_selected = st.multiselect("Pick Fruits:", list(all_fruits.index))  
@@ -69,7 +69,7 @@ def App():
   
   # the all fruits reference table  
   st.header('All Fruits Reference')
-  st.dataframe(all_fruits)
+  st.dataframe(all_fruits.drop(['Weight','Metric'], axis=1)
     
 # run the app
 App()
