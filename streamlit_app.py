@@ -44,6 +44,8 @@ def App():
   for fruit in fruits_selected:
     fruit_counts.append(selected_fruit_slider(str(fruit)))
           
+  st.text(str(fruit_counts))
+      
   # the stats
   col1, col2, col3 = st.columns(3)
   col1.metric(label="Total Calories", value="70 °F", delta="1.2 °F")
