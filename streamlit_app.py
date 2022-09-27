@@ -17,10 +17,10 @@ def get_all_fruit():
 def FruitSelector():
   fruits_df = get_all_fruit()    
   # clean the table
-  display_fruits = (fruits_df.set_index('name')).drop(['id','order'], axis=1)  
+  display_fruits = (fruits_df.set_index('name')).drop(['id','order','family','genus'], axis=1)  
   # list the fruits
-  # fruits_selected = st.multiselect("Pick Fruits:", list(fruits_df.index))  
-  # st.dataframe(display_selected_fruits)
+  fruits_selected = st.multiselect("Pick Fruits:", list(display_fruits.index))
+  st.dataframe(display_selected_fruits)
   
   st.header('Your Selected Fruits')
   # display_selected_fruits = my_fruit_list.loc[fruits_selected]
