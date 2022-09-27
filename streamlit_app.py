@@ -50,9 +50,9 @@ def App():
   emojis = ""
   # display the icons
   for fruit in fruit_counts:
-    icon = all_fruits.loc[fruit[0]]).Icon
+    icon = (all_fruits.loc[fruit[0]]).Icon
     if (icon != "🍴"):      
-      emojis += (icon " ")
+      emojis += (icon + " ")
   
   st.header(emojis)
   
