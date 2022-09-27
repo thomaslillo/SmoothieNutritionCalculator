@@ -30,6 +30,9 @@ def FruitSelector():
   st.header('All Fruits')
   st.dataframe(fruits_df)
   
+  if st.button("Get My Smoothie Stats"):
+    SmoothieStats()
+  
 def SmoothieStats(df):
     # display the health information
     col1, col2, col3 = st.columns(3)
@@ -38,14 +41,12 @@ def SmoothieStats(df):
     col2.metric(label="Total Fat (G)", value="70 °F", delta="1.2 °F")
     col3.metric(label="Total Protine (G)", value="70 °F", delta="1.2 °F")  
   
-# == The base UI  
   
+# == The base UI    
 st.header('Build your own smoothie below!')
 st.text('Figure out how healthy your smoothies are.')
 
 if st.button("Start Making My Smoothie"):
   FruitSelector()
-  if st.button("Get My Smoothie Stats"):
-    SmoothieStats()
     
     
