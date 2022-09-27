@@ -6,7 +6,7 @@ import requests
 st.header('Build your own smoothie below!')
 st.text('Figure out how healthy your smoothies are.')
 
-st.button("Get Fruit List", key=None, help=None, on_click=None, args=None, kwargs=None, *, disabled=False)
+st.button("Get Fruit List", key=None, help=None, on_click=None)
 
 # bring in the data
 my_fruit_list = pandas.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt")
