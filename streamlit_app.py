@@ -8,18 +8,17 @@ st.text('Figure out how healthy your smoothies are.')
 
 st.button("Get Fruit List", key=None, help=None, on_click=None)
 
-# bring in the data
-my_fruit_list = pandas.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt")
-
-my_fruit_list = my_fruit_list.set_index('Fruit')
+# bring in the data - alt source
+# my_fruit_list = pandas.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt")
+# my_fruit_list = my_fruit_list.set_index('Fruit')
 
 # list the fruits
-fruits_selected = st.multiselect("Pick Fruits:", list(my_fruit_list.index))
+# fruits_selected = st.multiselect("Pick Fruits:", list(my_fruit_list.index))
 
 st.header('Your Selected Fruits')
-display_selected_fruits = my_fruit_list.loc[fruits_selected]
+# display_selected_fruits = my_fruit_list.loc[fruits_selected]
 
-st.dataframe(display_selected_fruits)
+# st.dataframe(display_selected_fruits)
 
 
 # display the health information
