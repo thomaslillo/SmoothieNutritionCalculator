@@ -17,7 +17,7 @@ def smoothie_nutri_total(df, col_name, multiples):
     stats = df.loc[[fruit[0]]]
     weight_multiple = float(stats['Weight']) / 100    
     total += (float(stats[col_name]) * weight_multiple) * fruit[1]
-  total = round(total, 3)
+  total = round(total, 2)
   return str(total)
 
 def selected_fruit_slider(fruit_name):
@@ -59,13 +59,13 @@ def App():
   fat, other = st.columns(2)
   
   # row 1
-  cals.metric(label="Smoothie Calories (per 100g) in Grams", value=total_cals, delta="1.2 °F")      
-  sugar.metric(label="Smoothie Sugar (per 100g) in Grams", value=total_sugar, delta="1.2 °F")        
+  cals.metric(label="Smoothie Calories", value=total_cals, delta="1.2 °F")      
+  sugar.metric(label="Smoothie Sugar", value=total_sugar, delta="1.2 °F")        
   # row 2
-  carbs.metric(label="Smoothie Carbohydrates (per 100g) in Grams", value=total_carbs, delta="1.2 °F")    
-  protine.metric(label="Smoothie Protein (per 100g) in Grams", value=total_protine, delta="1.2 °F")
+  carbs.metric(label="Smoothie Carbohydrates", value=total_carbs, delta="1.2 °F")    
+  protine.metric(label="Smoothie Protein", value=total_protine, delta="1.2 °F")
   # row 3
-  fat.metric(label="Smoothie Fat (per 100g) in Grams", value=total_fat, delta="1.2 °F")  
+  fat.metric(label="Smoothie Fat", value=total_fat, delta="1.2 °F")  
   
   # the all fruits reference table  
   st.header('All Fruits Reference')
