@@ -59,13 +59,13 @@ def App():
   fat, other = st.columns(2)
   
   # row 1
-  cals.metric(label="Calories of the Smoothie (per 100g) in Grams", value=total_cals, delta="1.2 °F")      
-  sugar.metric(label="Sugar of the Smoothie (per 100g) in Grams", value=total_sugar, delta="1.2 °F")        
+  cals.metric(label="Smoothie Calories (per 100g) in Grams", value=total_cals, delta="1.2 °F")      
+  sugar.metric(label="Smoothie Sugar (per 100g) in Grams", value=total_sugar, delta="1.2 °F")        
   # row 2
-  carbs.metric(label="Carbohydrates of the Smoothie (per 100g) in Grams", value=total_carbs, delta="1.2 °F")    
-  protine.metric(label="Protein of the Smoothie (per 100g) in Grams", value=total_protine, delta="1.2 °F")
+  carbs.metric(label="Smoothie Carbohydrates (per 100g) in Grams", value=total_carbs, delta="1.2 °F")    
+  protine.metric(label="Smoothie Protein (per 100g) in Grams", value=total_protine, delta="1.2 °F")
   # row 3
-  fat.metric(label="Fat of the Smoothie (per 100g) in Grams", value=total_fat, delta="1.2 °F")  
+  fat.metric(label="Smoothie Fat (per 100g) in Grams", value=total_fat, delta="1.2 °F")  
   
   # the all fruits reference table  
   st.header('All Fruits Reference')
