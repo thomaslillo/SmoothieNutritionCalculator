@@ -15,13 +15,14 @@ def smoothie_nutri_total(df, col_name, multiples):
   total = 0
   for fruit in multiples:
     stats = df.loc[[fruit[0]]]
-    weight_multiple = float(stats['Weight']) / 100    
-    total += (float(stats[col_name]) * weight_multiple) * fruit[1]
+    # weight_multiple = float(stats['Weight']) / 100    
+    # total += (float(stats[col_name]) * weight_multiple) * fruit[1]
+    total += float(stats[col_name])  * fruit[1]
   total = round(total, 3)
   return str(total)
 
 def selected_fruit_slider(fruit_name):
-  prompt = "Number of " + fruit_name + "(s) in the smoothie: "
+  prompt = "Number of " + fruit_name + " in the smoothie: "
   num = st.slider(prompt, 0, 20, 2)
   return [fruit_name, num]
 
@@ -69,7 +70,7 @@ def App():
   
   # the all fruits reference table  
   st.header('All Fruits Reference')
-  st.dataframe(all_fruits.drop(['Weight','Metric'], axis=1)
+  st.dataframe(all_fruits.drop(['Weight','Metric'], axis=1))
     
 # run the app
 App()
