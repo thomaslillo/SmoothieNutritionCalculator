@@ -19,8 +19,9 @@ def sum_values(df, col_name):
   return value
 
 def selected_fruit_slider(fruit_name):
-  prompt = "Pick the number of " + fruit_name + " in your smoothie: "
-  num = st.slider(prompt, 0, 130, 25)
+  prompt = "Number of " + fruit_name + " in your smoothie: "
+  num = st.slider(prompt, 0, 25, 5)
+  return [fruit_name, num]
 
 def App():  
   st.header('Build your own smoothie below!')
@@ -32,13 +33,17 @@ def App():
   
   # list the selected fruits
   fruits_selected = st.multiselect("Pick Fruits:", list(all_fruits.index))
-  smoothie = all_fruits.loc[fruits_selected]
+  
+  # display the smoothie  
   st.header('Your Selected Fruits')
-  st.table(smoothie)
+  # smoothie = all_fruits.loc[fruits_selected]    
+  # st.table(smoothie)
+  
+  fruit_counts = []
   
   for fruit in fruits_selected:
-    selected_fruit_slider(str(fruit))
-      
+    fruit_counts.append(selected_fruit_slider(str(fruit)))
+          
   # the stats
   col1, col2, col3 = st.columns(3)
   col1.metric(label="Total Calories", value="70 °F", delta="1.2 °F")
