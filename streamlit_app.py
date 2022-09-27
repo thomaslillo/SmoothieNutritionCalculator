@@ -18,6 +18,10 @@ def sum_values(df, col_name):
   value = 1
   return value
 
+def selected_fruit_slider(fruit_name):
+  prompt = "Pick the number of " + fruit_name + " in your smoothie: "
+  num = st.slider(prompt, 0, 130, 25)
+
 def App():  
   st.header('Build your own smoothie below!')
   st.text('Figure out how healthy your smoothies are.')
@@ -31,6 +35,9 @@ def App():
   smoothie = all_fruits.loc[fruits_selected]
   st.header('Your Selected Fruits')
   st.table(smoothie)
+  
+  for fruit in fruits_selected:
+    selected_fruit_slider(str(fruit))
       
   # the stats
   col1, col2, col3 = st.columns(3)
