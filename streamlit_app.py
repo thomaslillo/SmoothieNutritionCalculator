@@ -9,15 +9,17 @@ streamlit.header('Build your own smoothie below!')
 # bring in the data
 my_fruit_list = pandas.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt")
 
-# my_fruit_list = my_fruit_list.set_index('Fruit')
+my_fruit_list = my_fruit_list.set_index('Fruit')
 
 # list the fruits
-fruits_selected = streamlit.multiselect("Pick Fruits:", list(my_fruit_list.Fruit))
+fruits_selected = streamlit.multiselect("Pick Fruits:", list(my_fruit_list.index))
 
 streamlit.header('Your Selected Fruits')
-display_selected_fruits = my_fruit_list.Fruit.loc[fruits_selected]
+display_selected_fruits = my_fruit_list.loc[fruits_selected]
+
 streamlit.dataframe(display_selected_fruits)
 
+# all fruits
 streamlit.header('All Fruits')
 
 streamlit.dataframe(my_fruit_list)
