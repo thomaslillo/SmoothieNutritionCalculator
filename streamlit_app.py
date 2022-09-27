@@ -30,22 +30,14 @@ def App():
   
   # API request for fruits
   fruits_df = get_all_fruit()
+  fruits_df = fruits_df[~fruits_df['Calories'].isnull()]
   
   # clean the table
-  all_fruits = (fruits_df.set_index('Fruit'))#.drop(['id','order'], axis=1)  
-  #all_fruits.rename(columns = {'nutritions.carbohydrates':'Carbohydrates', 
-  #                             'nutritions.protein':'Protein', 
-  #                             'nutritions.fat':'Fat', 
-  #                             'nutritions.calories':'Calories', 
-  #                             'nutritions.sugar':'Sugar'}, 
-  #                             inplace = True)
+  all_fruits = (fruits_df.set_index('Fruit')).drop(['Weight','Metric'], axis=1)
+  
     
   # list the selected fruits
-  fruits_selected = st.multiselect("Pick Fruits:", list(all_fruits.index))
-  
-  # display the smoothie  
-  # smoothie = all_fruits.loc[fruits_selected]    
-  # st.table(smoothie)
+  fruits_selected = st.multiselect("Pick Fruits:", list(all_fruits.index))  
   
   # get fruit multiples
   fruit_counts = []  
