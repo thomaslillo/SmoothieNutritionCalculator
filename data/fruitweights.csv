@@ -1,4 +1,4 @@
-Fruit Type ,UnitDef,Weight,Metric,Carbohydrates,Protein,Fat,Calories,Sugar
+Fruit TypeÂ ,UnitDef,Weight,Metric,Carbohydrates,Protein,Fat,Calories,Sugar
 Apple,,195,g,11.4,0.3,0.4,52,10.3
 Apricot,,35,g,3.9,0.5,0.1,15,3.2
 Banana,,120,g,22,1,0.2,96,17.2
@@ -8,11 +8,11 @@ Cherry,,5,g,12,1,0.3,50,8
 Fig,,50,g,19,0.8,0.3,74,16
 Grapes,,5,g,18.1,0.72,0.16,69,15.48
 GreenApple,,195,g,3.1,0.4,0.1,21,6.4
-Guava,,200,g ,14,2.6,1,68,9
+Guava,,200,gÂ ,14,2.6,1,68,9
 Kiwi,,75,g,15,1.1,0.5,61,9
-Lemon,,100,g ,9,1.1,0.3,29,2.5
-Lime,,50,g ,8.4,0.3,0.1,25,1.7
-Mango,,200,g ,15,0.82,0.38,60,13.7
+Lemon,,100,gÂ ,9,1.1,0.3,29,2.5
+Lime,,50,gÂ ,8.4,0.3,0.1,25,1.7
+Mango,,200,gÂ ,15,0.82,0.38,60,13.7
 Melon,,1.8,kg,8,0,0,34,8
 Orange,,130,g,8.3,1,0.2,43,8.2
 Papaya,,450,g,11,0,0.4,43,1
@@ -21,24 +21,24 @@ Pineapple,,1.59,kg,13.12,0.54,0.12,50,9.85
 Plum,,65,g,11.4,0.7,0.28,46,9.92
 Raspberry,,5,g,12,1.2,0.7,53,4.4
 Strawberry,,12,g,5.5,0.8,0.4,29,5.4
-Tomato,,170,g ,3.9,0.9,0.2,74,2.6
+Tomato,,170,gÂ ,3.9,0.9,0.2,74,2.6
 Watermelon,,9,kg,8,0.6,0.2,30,6
-Coconut ,,680,g,,,,,
-Cranberry,,1.13,g ,,,,,
+CoconutÂ ,,680,g,,,,,
+Cranberry,,1.13,gÂ ,,,,,
 Grapefruit,,246,g,,,,,
-Pomegranate ,,255,g,,,,,
+PomegranateÂ ,,255,g,,,,,
 Pumpkin,,4.5,kg,,,,,
-Nectarine ,,150,g,,,,,
-Peach ,,150,g,,,,,
+NectarineÂ ,,150,g,,,,,
+PeachÂ ,,150,g,,,,,
 Jackfruit (Durian),,6.8,kg,,,,,
-Avocado ,,170,g,,,,,
-Green Beans ,,5,g,,,,,
-Bell Pepper,,170,g ,,,,,
-Broccoli ,,225,g ,,,,,
-Cabbage ,,9.07,kg,,,,,
-Carrots ,,60,g,,,,,
-Kale,bunches of,198,g ,,,,,
-Lettuce ,heads of,800,g ,,,,,
-Pea,,0.2,g ,,,,,
-Spinach ,cups of,30,g,,,,,
-Sweet Potato,,113,g ,,,,,
+AvocadoÂ ,,170,g,,,,,
+Green BeansÂ ,,5,g,,,,,
+Bell Pepper,,170,gÂ ,,,,,
+BroccoliÂ ,,225,gÂ ,,,,,
+CabbageÂ ,,9.07,kg,,,,,
+CarrotsÂ ,,60,g,,,,,
+Kale,bunches of,198,gÂ ,,,,,
+LettuceÂ ,heads of,800,gÂ ,,,,,
+Pea,,0.2,gÂ ,,,,,
+SpinachÂ ,cups of,30,g,,,,,
+Sweet Potato,,113,gÂ ,,,,,
