@@ -67,20 +67,20 @@ def App():
   total_fat = smoothie_nutri_total(all_fruits, 'Fat', fruit_counts)
   
   # display the stats
-  
-  
-  
+    
   cals, sugar = st.columns(2)
-  carbs, protine, fat = st.columns(3)
+  carbs, protine = st.columns(2)
+  fat = st.columns(1)
   
   # row 1
   cals.metric(label="Calories of the Smoothie (per 100g) in Grams", value=total_cals, delta="1.2 °F")      
   sugar.metric(label="Sugar of the Smoothie (per 100g) in Grams", value=total_sugar, delta="1.2 °F")        
   # row 2
   carbs.metric(label="Carbohydrates of the Smoothie (per 100g) in Grams", value=total_carbs, delta="1.2 °F")    
-  protine.metric(label="Protein of the Smoothie (per 100g) in Grams", value=total_protine, delta="1.2 °F")    
-  fat.metric(label="Fat of the Smoothie (per 100g) in Grams", value=total_fat, delta="1.2 °F")        
-    
+  protine.metric(label="Protein of the Smoothie (per 100g) in Grams", value=total_protine, delta="1.2 °F")
+  # row 3
+  fat.metric(label="Fat of the Smoothie (per 100g) in Grams", value=total_fat, delta="1.2 °F")  
+  
   # the all fruits reference table  
   st.header('All Fruits Reference')
   st.dataframe(all_fruits)
