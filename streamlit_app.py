@@ -80,6 +80,11 @@ def App():
   st.header('All Fruits Reference')
   st.text('All nutrient values are per 100g of the fruit.')
   st.dataframe(all_fruits)
-    
+  
+  st.text("Built by Thomas Lillo")
+  st.text("Source Code:")
+  st.text("https://github.com/thomaslillo/SmoothieNutritionCalculator")
+  
+  
 # run the app
 App()
