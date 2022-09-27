@@ -47,9 +47,12 @@ def App():
   # get the smoothie stats
   st.header("Your Smoothie's Stats")  
             
-  emojis = ""  
+  emojis = ""
+  # display the icons
   for fruit in fruit_counts:
-    emojis += ((all_fruits.loc[fruit[0]]).Icon + " ")
+    icon = all_fruits.loc[fruit[0]]).Icon
+    if (icon != "🍴"):      
+      emojis += (icon " ")
   
   st.header(emojis)
   
