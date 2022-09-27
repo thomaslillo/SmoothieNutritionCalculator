@@ -18,7 +18,7 @@ def smoothie_nutri_total(df, col_name, multiples):
   total = 0
   for fruit in multiples:
     st.text(fruit[0])
-    stats = all_fruits.loc[fruit[0]]
+    stats = all_fruits.loc[[fruit[0]]]
     total += float(stats[col_name]) * fruit[1]
   return total
 
@@ -60,7 +60,7 @@ def App():
   # get the smoothie stats
   st.header("Your Smoothie's Stats")
   
-  # total_cals = smoothie_nutri_total(all_fruits, 'Calories', fruit_counts)
+  total_cals = smoothie_nutri_total(all_fruits, 'Calories', fruit_counts)
   # total_carbs = smoothie_nutri_total(all_fruits, 'Carbohydrates', fruit_counts)
   # total_protine = smoothie_nutri_total(all_fruits, 'Protein', fruit_counts)
   # total_fat = smoothie_nutri_total(all_fruits, 'Fat', fruit_counts)
