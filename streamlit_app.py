@@ -49,7 +49,7 @@ def App():
             
   emojis = ""  
   for fruit in fruit_counts:
-    emojis += (all_fruits[fruit[0]].Icon + " ")
+    emojis += ((all_fruits.loc[fruit[0]]).Icon + " ")
   
   st.header(emojis)
   
