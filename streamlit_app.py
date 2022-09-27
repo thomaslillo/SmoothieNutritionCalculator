@@ -54,6 +54,7 @@ def App():
           
   st.text(str(fruit_counts))
 
+  st.header("Your Smoothie's Stats")
   
   # get the smoothie stats
   col1, col2, col3 = st.columns(3)
