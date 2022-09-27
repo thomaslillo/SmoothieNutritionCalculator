@@ -70,7 +70,7 @@ def App():
     
   cals, sugar = st.columns(2)
   carbs, protine = st.columns(2)
-  fat = st.columns(1)
+  # fat = st.columns(1)
   
   # row 1
   cals.metric(label="Calories of the Smoothie (per 100g) in Grams", value=total_cals, delta="1.2 °F")      
