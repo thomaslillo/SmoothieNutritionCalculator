@@ -33,9 +33,9 @@ def App():
   # clean the table
   all_fruits = (fruits_df.set_index('name')).drop(['id','order','family','genus'], axis=1)  
   all_fruits.rename(columns = {'nutritions.carbohydrates':'Carbohydrates', 
-                               'nutritions.protein':'Protein'}, 
-                               'nutritions.fat':'Fat'}, 
-                               'nutritions.calories':'Calories'}, 
+                               'nutritions.protein':'Protein', 
+                               'nutritions.fat':'Fat', 
+                               'nutritions.calories':'Calories', 
                                'nutritions.sugar':'Sugar'}, 
                                inplace = True)
     
