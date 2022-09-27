@@ -35,7 +35,7 @@ def App():
   fruits_df = fruits_df[~fruits_df['Calories'].isnull()]
   
   # clean the table
-  all_fruits = fruits_df.set_index('Fruit'))
+  all_fruits = fruits_df.set_index('Fruit')
       
   # list the selected fruits
   fruits_selected = st.multiselect("Pick Fruits:", list(all_fruits.index))  
