@@ -22,7 +22,7 @@ def smoothie_nutri_total(df, col_name, multiples):
 
 def selected_fruit_slider(fruit_name):
   prompt = "Number of " + fruit_name + " in the smoothie: "
-  num = st.slider(prompt, 0, 20, 2)
+  num = st.slider(prompt, 0, 30, 2)
   return [fruit_name, num]
 
 def App():  
