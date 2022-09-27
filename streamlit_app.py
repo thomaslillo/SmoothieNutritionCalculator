@@ -7,13 +7,6 @@ import requests
 # my_fruit_list = pandas.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt")
 # my_fruit_list = my_fruit_list.set_index('Fruit')
 
-def Main():
-  # == The base UI    
-  st.header('Build your own smoothie below!')
-  st.text('Figure out how healthy your smoothies are.')
-  if st.button("Start Making My Smoothie"):
-    App()    
-
 def get_all_fruit():    
   fruityvice_response = requests.get("https://fruityvice.com/api/fruit/all")  
   #st.text(fruityvice_response.json())    
@@ -43,5 +36,7 @@ def App():
   st.dataframe(display_fruits)
     
 # run the app
-if __name__ == "__main__":
-  Main()
+st.header('Build your own smoothie below!')
+st.text('Figure out how healthy your smoothies are.')
+if st.button("Start Making My Smoothie"):
+  App()
