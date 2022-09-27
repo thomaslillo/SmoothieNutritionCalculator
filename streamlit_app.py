@@ -69,7 +69,7 @@ def App():
   
   # the all fruits reference table  
   st.header('All Fruits Reference')
-  st.test('All nutrient values are per 100g of the fruit.')
+  st.text('All nutrient values are per 100g of the fruit.')
   st.dataframe(all_fruits)
     
 # run the app
