@@ -35,3 +35,7 @@ st.dataframe(my_fruit_list)
 
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
 st.text(fruityvice_response.json())
+
+fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
+# write your own comment - what does this do?
+streamlit.dataframe(fruityvice_normalized)
