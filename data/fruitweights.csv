@@ -1,44 +1,38 @@
-Fruit,UnitDef,Weight,Metric,Carbohydrates,Protein,Fat,Calories,Sugar
-Apple,1,195,g,11.4,0.3,0.4,52,10.3
-Apricot,1,35,g,3.9,0.5,0.1,15,3.2
-Banana,1,120,g,22,1,0.2,96,17.2
-Blackberry,1,2.45,g,9,1.3,0.4,40,4.5
-Blueberry,1,0.5,g,5.5,0,0.4,29,5.4
-Cherry,1,5,g,12,1,0.3,50,8
-Fig,1,50,g,19,0.8,0.3,74,16
-Grapes,1,5,g,18.1,0.72,0.16,69,15.48
-GreenApple,1,195,g,3.1,0.4,0.1,21,6.4
-Guava,1,200,g,14,2.6,1,68,9
-Kiwi,1,75,g,15,1.1,0.5,61,9
-Lemon,1,100,g,9,1.1,0.3,29,2.5
-Lime,1,50,g,8.4,0.3,0.1,25,1.7
-Mango,1,200,g,15,0.82,0.38,60,13.7
-Melon,1,1800,g,8,0,0,34,8
-Orange,1,130,g,8.3,1,0.2,43,8.2
-Papaya,1,450,g,11,0,0.4,43,1
-Pear,1,180,g,15,0.4,0.1,57,10
-Pineapple,1,1590,g,13.12,0.54,0.12,50,9.85
-Plum,1,65,g,11.4,0.7,0.28,46,9.92
-Raspberry,1,5,g,12,1.2,0.7,53,4.4
-Strawberry,1,12,g,5.5,0.8,0.4,29,5.4
-Tomato,1,170,g,3.9,0.9,0.2,74,2.6
-Watermelon,1,9000,g,8,0.6,0.2,30,6
-Coconut,1,680,g,,,,,
-Cranberry,1,1.13,g,,,,,
-Grapefruit,1,246,g,,,,,
-Pomegranate,1,255,g,,,,,
-Pumpkin,1,4500,g,,,,,
-Nectarine,1,150,g,,,,,
-Peach,1,150,g,,,,,
-Jackfruit,1,6800,g,,,,,
-Avocado,1,170,g,,,,,
-Green Beans,1,5,g,,,,,
-Bell Pepper,1,170,g,,,,,
-Broccoli,1,225,g,,,,,
-Cabbage,1,9070,g,,,,,
-Carrots,1,60,g,,,,,
-Kale,1 bunch,198,g,,,,,
-Lettuce,1 head,800,g,,,,,
-Pea,1,0.2,g,,,,,
-Spinach,1 cup,30,g,,,,,
-Sweet Potato,1,113,g,,,,,
+Fruit,UnitDef,Weight,Metric,Carbohydrates,Protein,Fat,Calories,Sugar,Icon
+Apple,1,195,g,11.4,0.3,0.4,52,10.3,🍎
+Apricot,1,35,g,3.9,0.5,0.1,15,3.2,🍑
+Banana,1,120,g,22,1,0.2,96,17.2,🍌
+Blackberry,1,2.45,g,9,1.3,0.4,40,4.5,🍴
+Blueberry,1,0.5,g,5.5,0,0.4,29,5.4,🫐
+Cherry,1,5,g,12,1,0.3,50,8,🍒
+Fig,1,50,g,19,0.8,0.3,74,16,🍴
+Grapes,1,5,g,18.1,0.72,0.16,69,15.48,🍇
+GreenApple,1,195,g,3.1,0.4,0.1,21,6.4,🍴
+Guava,1,200,g,14,2.6,1,68,9,🍴
+Kiwi,1,75,g,15,1.1,0.5,61,9,🥝
+Lemon,1,100,g,9,1.1,0.3,29,2.5,🍋
+Lime,1,50,g,8.4,0.3,0.1,25,1.7,🍈
+Mango,1,200,g,15,0.82,0.38,60,13.7,🥭
+Melon,1,1800,g,8,0,0,34,8,🍴
+Orange,1,130,g,8.3,1,0.2,43,8.2,🍊
+Papaya,1,450,g,11,0,0.4,43,1,🍴
+Pear,1,180,g,15,0.4,0.1,57,10,🍐
+Pineapple,1,1590,g,13.12,0.54,0.12,50,9.85,🍍
+Plum,1,65,g,11.4,0.7,0.28,46,9.92,🍴
+Raspberry,1,5,g,12,1.2,0.7,53,4.4,🍴
+Strawberry,1,12,g,5.5,0.8,0.4,29,5.4,🍓
+Tomato,1,170,g,3.9,0.9,0.2,74,2.6,🍅
+Watermelon,1,9000,g,8,0.6,0.2,30,6,🍉
+Coconut,1,680,g,,,,,,🥥
+Cranberry,1,1.13,g,,,,,,🍴
+Grapefruit,1,246,g,,,,,,🍴
+Pomegranate,1,255,g,,,,,,🍴
+Pumpkin,1,4500,g,,,,,,🎃
+Nectarine,1,150,g,,,,,,🍊
+Peach,1,150,g,,,,,,🍑
+Avocado,1,170,g,,,,,,🥑
+Broccoli,1,225,g,,,,,,🥦
+Carrots,1,60,g,,,,,,🍴
+Kale,1 bunch,198,g,,,,,,🥬
+Spinach,1 cup,30,g,,,,,,🥬
+Sweet Potato,1,113,g,,,,,,🍠
