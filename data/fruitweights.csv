@@ -1,4 +1,4 @@
-Fruit Type ,UnitDef,Weight,Metric,Carbohydrates,Protein,Fat,Calories,Sugar
+Fruit,UnitDef,Weight,Metric,Carbohydrates,Protein,Fat,Calories,Sugar
 Apple,,195,g,11.4,0.3,0.4,52,10.3
 Apricot,,35,g,3.9,0.5,0.1,15,3.2
 Banana,,120,g,22,1,0.2,96,17.2
