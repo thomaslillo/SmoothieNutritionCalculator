@@ -17,7 +17,6 @@ def get_all_fruit():
 def smoothie_nutri_total(df, col_name, multiples):  
   total = 0
   for fruit in multiples:
-    st.text(fruit[0])
     stats = df.loc[[fruit[0]]]
     total += float(stats[col_name]) * fruit[1]
   return str(total)
