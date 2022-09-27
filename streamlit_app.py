@@ -15,9 +15,8 @@ def smoothie_nutri_total(df, col_name, multiples):
   total = 0
   for fruit in multiples:
     stats = df.loc[[fruit[0]]]
-    # weight_multiple = float(stats['Weight']) / 100    
-    # total += (float(stats[col_name]) * weight_multiple) * fruit[1]
-    total += float(stats[col_name])  * fruit[1]
+    weight_multiple = float(stats['Weight']) / 100    
+    total += (float(stats[col_name]) * weight_multiple) * fruit[1]
   total = round(total, 3)
   return str(total)
 
