@@ -19,6 +19,7 @@ def smoothie_nutri_total(df, col_name, multiples):
   for fruit in multiples:
     stats = df.loc[[fruit[0]]]
     total += float(stats[col_name]) * fruit[1]
+    round(total, 2)
   return str(total)
 
 def selected_fruit_slider(fruit_name):
