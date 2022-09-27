@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas
 import requests
+import snowflake.connector
 
 st.header('Smoothie Nutrition')
 st.text('Figure out how healthy your smoothies are.')
