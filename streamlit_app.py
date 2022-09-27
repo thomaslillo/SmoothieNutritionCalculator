@@ -62,7 +62,7 @@ def App():
   col2.metric(label="Total Fat (G)", value="70 °F", delta="1.2 °F")
   col3.metric(label="Total Protine (G)", value="70 °F", delta="1.2 °F")  
   
-  st.header('All Fruits Chart')
+  st.header('All Fruits Reference Chart')
   st.dataframe(all_fruits)
     
 # run the app
