@@ -27,10 +27,18 @@ def App():
   st.header('Build your own smoothie below!')
   st.text('Figure out how healthy your smoothies are.')
   
+  # API request for fruits
   fruits_df = get_all_fruit()    
+  
   # clean the table
   all_fruits = (fruits_df.set_index('name')).drop(['id','order','family','genus'], axis=1)  
-  
+  all_fruits.rename(columns = {'nutritions.carbohydrates':'Carbohydrates', 
+                               'nutritions.protein':'Protein'}, 
+                               'nutritions.fat':'Fat'}, 
+                               'nutritions.calories':'Calories'}, 
+                               'nutritions.sugar':'Sugar'}, 
+                               inplace = True)
+    
   # list the selected fruits
   fruits_selected = st.multiselect("Pick Fruits:", list(all_fruits.index))
   
@@ -39,14 +47,15 @@ def App():
   # smoothie = all_fruits.loc[fruits_selected]    
   # st.table(smoothie)
   
-  fruit_counts = []
-  
+  # get fruit multiples
+  fruit_counts = []  
   for fruit in fruits_selected:
     fruit_counts.append(selected_fruit_slider(str(fruit)))
           
   st.text(str(fruit_counts))
-      
-  # the stats
+
+  
+  # get the smoothie stats
   col1, col2, col3 = st.columns(3)
   col1.metric(label="Total Calories", value="70 °F", delta="1.2 °F")
   col2.metric(label="Total Fat (G)", value="70 °F", delta="1.2 °F")
