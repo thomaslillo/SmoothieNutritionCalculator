@@ -70,7 +70,7 @@ def App():
   
   # the all fruits reference table  
   st.header('All Fruits Reference')
-  st.dataframe(all_fruits.drop(['Weight','Metric'], axis=1))
+  st.dataframe(all_fruits)
     
 # run the app
 App()
