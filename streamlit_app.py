@@ -8,11 +8,8 @@ import requests
 # my_fruit_list = my_fruit_list.set_index('Fruit')
 
 def get_all_fruit():    
-  fruityvice_response = requests.get("https://fruityvice.com/api/fruit/all")  
-  #st.text(fruityvice_response.json())    
-  if (fruityvice_response.ok):  
-    fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())   
-  return fruityvice_normalized
+  fruit_table = pandas.read_csv("./data/fruitweights.csv")  
+  return fruit_table
 
 def smoothie_nutri_total(df, col_name, multiples):  
   total = 0
@@ -32,16 +29,16 @@ def App():
   st.text('Figure out how healthy your smoothies are.')
   
   # API request for fruits
-  fruits_df = get_all_fruit()    
+  fruits_df = get_all_fruit()
   
   # clean the table
-  all_fruits = (fruits_df.set_index('name')).drop(['id','order'], axis=1)  
-  all_fruits.rename(columns = {'nutritions.carbohydrates':'Carbohydrates', 
-                               'nutritions.protein':'Protein', 
-                               'nutritions.fat':'Fat', 
-                               'nutritions.calories':'Calories', 
-                               'nutritions.sugar':'Sugar'}, 
-                               inplace = True)
+  all_fruits = (fruits_df.set_index('Fruit'))#.drop(['id','order'], axis=1)  
+  #all_fruits.rename(columns = {'nutritions.carbohydrates':'Carbohydrates', 
+  #                             'nutritions.protein':'Protein', 
+  #                             'nutritions.fat':'Fat', 
+  #                             'nutritions.calories':'Calories', 
+  #                             'nutritions.sugar':'Sugar'}, 
+  #                             inplace = True)
     
   # list the selected fruits
   fruits_selected = st.multiselect("Pick Fruits:", list(all_fruits.index))
