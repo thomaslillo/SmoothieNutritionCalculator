@@ -14,21 +14,24 @@ def get_all_fruit():
     fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())   
   return fruityvice_normalized
 
+def sum_values(df, str: col_name):
+  value = 1
+  return value
+
 def App():  
   st.header('Build your own smoothie below!')
   st.text('Figure out how healthy your smoothies are.')
   
   fruits_df = get_all_fruit()    
   # clean the table
-  display_fruits = (fruits_df.set_index('name')).drop(['id','order','family','genus'], axis=1)  
+  all_fruits = (fruits_df.set_index('name')).drop(['id','order','family','genus'], axis=1)  
   
   # list the selected fruits
   fruits_selected = st.multiselect("Pick Fruits:", list(display_fruits.index))
-  st.dataframe(fruits_selected)
-  
+  display_selected_fruits = all_fruits.loc[fruits_selected]
   st.header('Your Selected Fruits')
-  # display_selected_fruits = my_fruit_list.loc[fruits_selected] 
-
+  st.dataframe(display_selected_fruits)
+      
   # the stats
   col1, col2, col3 = st.columns(3)
   col1.metric(label="Total Calories", value="70 °F", delta="1.2 °F")
@@ -36,7 +39,7 @@ def App():
   col3.metric(label="Total Protine (G)", value="70 °F", delta="1.2 °F")  
   
   st.header('All Fruits Chart')
-  st.dataframe(display_fruits)
+  st.dataframe(all_fruits)
     
 # run the app
 App()
