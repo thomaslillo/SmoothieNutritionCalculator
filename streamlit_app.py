@@ -39,4 +39,6 @@ def App():
 st.header('Build your own smoothie below!')
 st.text('Figure out how healthy your smoothies are.')
 if st.button("Start Making My Smoothie"):
+  RunApp = True
+while RunApp:
   App()
