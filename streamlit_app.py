@@ -13,11 +13,9 @@ def get_all_fruit():
 st.header('Build your own smoothie below!')
 st.text('Figure out how healthy your smoothies are.')
 
-st.button("Get Fruit List", key=None, help=None, on_click=None)
-
-returned = get_all_fruit()
-
-st.dataframe(returned)
+if st.button("Start Making My Smoothie"):
+  returned = get_all_fruit()  
+  st.dataframe(returned)
 
 # bring in the data - alt source
 # my_fruit_list = pandas.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt")
