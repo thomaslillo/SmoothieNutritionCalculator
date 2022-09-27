@@ -14,12 +14,15 @@ def get_all_fruit():
     fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())   
   return fruityvice_normalized
 
-def sum_values(df, col_name):
-  value = 1
-  return value
+def smoothie_nutri_total(df, col_name, multiples):  
+  total = 0
+  for fruit in multiples:
+    stats = all_fruits.loc[fruit[0]]
+    total += float(stats[col_name]) * fruit[1]
+  return total
 
 def selected_fruit_slider(fruit_name):
-  prompt = "Number of " + fruit_name + " in your smoothie: "
+  prompt = "Number of " + fruit_name + " (by 100g) in your smoothie: "
   num = st.slider(prompt, 0, 25, 5)
   return [fruit_name, num]
 
@@ -43,7 +46,6 @@ def App():
   fruits_selected = st.multiselect("Pick Fruits:", list(all_fruits.index))
   
   # display the smoothie  
-  st.header('Your Selected Fruits')
   # smoothie = all_fruits.loc[fruits_selected]    
   # st.table(smoothie)
   
@@ -54,17 +56,25 @@ def App():
           
   st.text(str(fruit_counts))
 
+  # get the smoothie stats
   st.header("Your Smoothie's Stats")
   
-  # get the smoothie stats
+  total_cals = smoothie_nutri_total(all_fruits, 'Calories', fruit_counts)
+  total_carbs = smoothie_nutri_total(all_fruits, 'Carbohydrates', fruit_counts)
+  total_protine = smoothie_nutri_total(all_fruits, 'Protein', fruit_counts)
+  total_fat = smoothie_nutri_total(all_fruits, 'Fat', fruit_counts)
+  total_sugar = smoothie_nutri_total(all_fruits, 'Sugar', fruit_counts)      
+  
+  # display the stats
   cals, carbs, protine, fat, sugar = st.columns(5)
   
-  cals.metric(label="Total Protine (G)", value="70 °F", delta="1.2 °F")  
-  carbs.metric(label="Total Calories", value="70 °F", delta="1.2 °F")
-  protine.metric(label="Total Fat (G)", value="70 °F", delta="1.2 °F")
-  fat.metric(label="Total Protine (G)", value="70 °F", delta="1.2 °F")    
-  sugar.metric(label="Total Protine (G)", value="70 °F", delta="1.2 °F")      
-  
+  cals.metric(label="Calories of the Smoothie (per 100g) in Grams", value=str(total_cals), delta="1.2 °F")  
+  carbs.metric(label="Carbohydrates of the Smoothie (per 100g) in Grams", value=str(total_carbs), delta="1.2 °F")
+  protine.metric(label="Protein of the Smoothie (per 100g) in Grams", value=str(total_protine), delta="1.2 °F")
+  fat.metric(label="Fat of the Smoothie (per 100g) in Grams", value=str(total_fat), delta="1.2 °F")    
+  sugar.metric(label="Sugar of the Smoothie (per 100g) in Grams", value=str(total_sugar), delta="1.2 °F")      
+    
+  # the all fruits reference table  
   st.header('All Fruits Reference')
   st.dataframe(all_fruits)
     
