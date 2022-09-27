@@ -14,7 +14,7 @@ def get_all_fruit():
     fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())   
   return fruityvice_normalized
 
-def sum_values(df, str: col_name):
+def sum_values(df, col_name):
   value = 1
   return value
 
