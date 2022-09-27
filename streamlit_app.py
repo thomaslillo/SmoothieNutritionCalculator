@@ -14,7 +14,10 @@ def get_all_fruit():
     fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())   
   return fruityvice_normalized
 
-def App():
+def App():  
+  st.header('Build your own smoothie below!')
+  st.text('Figure out how healthy your smoothies are.')
+  
   fruits_df = get_all_fruit()    
   # clean the table
   display_fruits = (fruits_df.set_index('name')).drop(['id','order','family','genus'], axis=1)  
@@ -36,9 +39,4 @@ def App():
   st.dataframe(display_fruits)
     
 # run the app
-st.header('Build your own smoothie below!')
-st.text('Figure out how healthy your smoothies are.')
-if st.button("Start Making My Smoothie"):
-  RunApp = True
-while RunApp:
-  App()
+App()
