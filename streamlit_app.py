@@ -53,9 +53,7 @@ def App():
   # get fruit multiples
   fruit_counts = []  
   for fruit in fruits_selected:
-    fruit_counts.append(selected_fruit_slider(str(fruit)))
-          
-  st.text(str(fruit_counts))
+    fruit_counts.append(selected_fruit_slider(str(fruit)))          
 
   # get the smoothie stats
   st.header("Your Smoothie's Stats")
@@ -66,8 +64,7 @@ def App():
   total_protine = smoothie_nutri_total(all_fruits, 'Protein', fruit_counts)
   total_fat = smoothie_nutri_total(all_fruits, 'Fat', fruit_counts)
   
-  # display the stats
-    
+  # display the stats    
   cals, sugar = st.columns(2)
   carbs, protine = st.columns(2)
   fat, other = st.columns(2)
