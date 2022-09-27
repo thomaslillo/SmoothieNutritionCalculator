@@ -27,10 +27,10 @@ def App():
   all_fruits = (fruits_df.set_index('name')).drop(['id','order','family','genus'], axis=1)  
   
   # list the selected fruits
-  fruits_selected = st.multiselect("Pick Fruits:", list(display_fruits.index))
-  display_selected_fruits = all_fruits.loc[fruits_selected]
+  fruits_selected = st.multiselect("Pick Fruits:", list(all_fruits.index))
+  smoothie = all_fruits.loc[fruits_selected]
   st.header('Your Selected Fruits')
-  st.dataframe(display_selected_fruits)
+  st.table(smoothie)
       
   # the stats
   col1, col2, col3 = st.columns(3)
