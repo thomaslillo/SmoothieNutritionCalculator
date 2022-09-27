@@ -37,15 +37,21 @@ def App():
   all_fruits = fruits_df.set_index('Fruit')
       
   # list the selected fruits
-  fruits_selected = st.multiselect("Pick Fruits:", list(all_fruits.index))  
-  
+  fruits_selected = st.multiselect("Pick Fruits:", list(all_fruits.index))    
+    
   # get fruit multiples
   fruit_counts = []  
   for fruit in fruits_selected:
-    fruit_counts.append(selected_fruit_slider(str(fruit)))          
-
+    fruit_counts.append(selected_fruit_slider(str(fruit)))
+  
   # get the smoothie stats
-  st.header("Your Smoothie's Stats")
+  st.header("Your Smoothie's Stats")  
+            
+  emojis = ""  
+  for fruit in fruit_counts:
+    emojis += (all_fruits[fruit[0]].Icon + " ")
+  
+  st.header(emojis)
   
   total_cals = smoothie_nutri_total(all_fruits, 'Calories', fruit_counts)
   total_sugar = smoothie_nutri_total(all_fruits, 'Sugar', fruit_counts)
