@@ -6,7 +6,7 @@ import requests
 def get_all_fruit():    
   fruityvice_response = requests.get("https://fruityvice.com/api/fruit/all")  
   #st.text(fruityvice_response.json())  
-  st.text(fruityvice_response.json)  
+  st.text(fruityvice_response.Response)
   fruityvice_normalized = pandas.json_normalize(fruityvice_response.json()) 
   return fruityvice_normalized
 
